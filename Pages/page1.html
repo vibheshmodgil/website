@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bhivesh Website</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+        data.addRows([
+          [{'v':'Mike', 'f':'Mike<div style="color:red; font-style:italic">President</div>'},
+           '', 'The President'],
+          [{'v':'Jim', 'f':'Jim<div style="color:red; font-style:italic">Vice President</div>'},
+           'Mike', 'VP'],
+          ['Alice', 'Mike', ''],
+          ['Bhivesh','Mike', ''],
+        //   ['Bob', 'Jim', 'Bob Sponge'],
+        //   ['Carol', 'Bob', '']
+        ]);
+
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        chart.draw(data, {'allowHtml':true});
+      }
+   </script>
+</head>
+<body>
+    
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="projects container">
+            <div class="projects-top">
+                <h1 class="section-title">Two Wheeler <span>EV</span> Drive Train Sizing</h1>
+                <p style="text-align:center">"A comprehensive analysis”</p>
+
+            </div>
+            <div id="chart_div" class="chart"></div>
+            <div class="projects-bottom">
+                <div class="projects-items">
+                    <div class="icon check">
+                    <img src="/Pages/images/eMobilityLabLogo.png"/>
+                    </div>
+                    <div class="check">
+                    <h2>E-mobility Lab Published this Report Drive Trian Sizing</h2>
+                    </div>
+                    <p> The E-Mobility team from the Department of Electrical and Electronics
+                        Engineering prepared this report on behalf of the Indian Institute of Technology Guwahati which focuses on 2-wheeler (2-W) electric drivetrain technology. Further, the report is an exhaustive analysis right from drive cycle raw
+                        data to the entire powertrain and battery sizing for an Electric Vehicle
+                        design. The E-Mobility team, led by Dr.-Ing. Praveen Kumar, who is a professor in the Department of Electronics and Electrical Engineering at Indian
+                        Institute of Technology Guwahati.
+                    </p>
+                </div>
+                <div class="projects-items">
+                    <!-- <div class="icon">
+                        <img src="https://img.icons8.com/external-others-zufarizal-robiyanto/64/000000/external-heat-ecology-and-green-environment-solid-others-zufarizal-robiyanto.png"/>
+                    </div> -->
+                    <h2>Driving data collection </h2>
+                    <p>
+                        This report is based on the 2-wheeler driving pattern that the team members here at EML, Guwahati, measured in September and October. Collectively, the team drove over 1500 kms in different geographic locations of the
+                        country, including Tier 2 and Tier 3 cities, out of which over 1500 kms were
+                        driven in urban centers and over 1000 kms in rural area. Based on these
+                        driving data, varieties of real-world drive cycles were extracted. The driving
+                        data covers Karnataka, Madhya Pradesh, Punjab, Uttar Pradesh, New Delhi,
+                        Telangana, West Bengal, Bihar and Haryana.
+                        Eventually, using these drive cycles, we estimated the motor rating (rated
+                        and peak power and torque values, base and maximum speeds), converter rating, and appropriate energy and voltage rating of the battery pack. The report
+                        also gives an insight into types of motors that can be used (hub versus frame),
+                        motor topologies (induction, permanent magnet, synchronous reluctance, permanent magnet assisted synchronous reluctance motors, etc.), and suitable
+                        converter topologies. The report also has detailed pros and con analyses of
+                        different motor and converter topologies.
+                    </p>
+                </div>
+                
+                <div class="projects-items">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/dotty/80/000000/electric-bike.png"/>
+                    </div>
+                    <h2>Two Wheeler EV Drive Train Sizing </h2>
+                    <p>
+                        This report provides a comprehensive procedure for estimating battery size, design and optimization of motor
+                        specifications, fuel consumption and emission analysis from the raw drive cycle data.
+                        Raw drive cycle data is collected from different parts of India and comprises of both urban and rural drive data,
+                        this report is anticipated to represent the Indian driving scenario
+                    </p>
+                </div>
+                <div class="projects-items">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/ios/50/000000/electric-vehicle.png"/>
+                    </div>
+                    <h2>Accessibility of Electric Vehicles in Indian Market</h2>
+                    <p>
+                        The "Acceptability of Electric Vehicles in Indian Market" reports the public’s view and expectations towards
+electric mobility in the current scenario when there is a rapid shift towards greener mobility.
+This survey aims to understand the actual demands of the consumer so that we can bridge the gap between
+consumer expectations and the 2 Introduction products developed by OEMs.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+        
+
+
+    </section>
+
+</body>
+</html>
